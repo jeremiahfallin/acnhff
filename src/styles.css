@@ -12,6 +12,11 @@
     url("fonts/nintendoP_Humming-E002pr.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Seurat Pro B";
+  src: url("./fonts/FOT-Seurat Pro B.otf");
+}
+
 html,
 body {
   background-image: radial-gradient(#e5d8a9 20%, transparent 20%),
@@ -20,8 +25,9 @@ body {
   background-position: 0 0, 50px 50px;
   background-size: 20px 20px;
   /* font-family: "Spectral", serif; */
-  font-family: "Rodin_Wanpaku";
-  font-family: "Humming";
+  /* font-family: "Rodin_Wanpaku";
+  font-family: "Humming"; */
+  font-family: "Seurat Pro B";
   user-select: none;
   margin: 0;
   color: #6e6756;
