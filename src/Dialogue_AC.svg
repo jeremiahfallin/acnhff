@@ -1,0 +1,25 @@
+<svg id="Favorites_Dots" data-name="Favorites Dots" xmlns="http://www.w3.org/2000/svg" width="652" height="169" viewBox="0 0 652 169">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f8f5e6;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #efe4d2;
+      }
+    </style>
+  </defs>
+  <path id="Dialogue" class="cls-1" d="M281.406,17.427c309.056-50.949,396.418,20.89,363.625,74.918-10.148,16.719-36.337,36.8-95.853,49.816-66.462,14.539-161.993,19.055-267.772,25.1C-54.207,186.449-50.84-21.39,94.568,13.288,142.928,24.821,223.006,27.054,281.406,17.427Z"/>
+  <circle class="cls-2" cx="81.484" cy="50.781" r="11.828"/>
+  <ellipse class="cls-2" cx="175.391" cy="63" rx="11.859" ry="11.813"/>
+  <ellipse class="cls-2" cx="262.797" cy="63" rx="11.828" ry="11.813"/>
+  <ellipse class="cls-2" cx="364.86" cy="50.781" rx="11.828" ry="11.813"/>
+  <circle class="cls-2" cx="461.234" cy="39.359" r="11.828"/>
+  <circle class="cls-2" cx="566.594" cy="39.359" r="11.844"/>
+  <ellipse class="cls-2" cx="262.797" cy="129.828" rx="11.828" ry="11.828"/>
+  <circle class="cls-2" cx="366.5" cy="117.625" r="11.844"/>
+  <circle class="cls-2" cx="463.688" cy="106.188" r="11.844"/>
+  <ellipse class="cls-2" cx="569.844" cy="96.422" rx="11.844" ry="11.828"/>
+</svg>

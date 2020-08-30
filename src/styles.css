@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Rodin_Wanpaku";
+  src: url("fonts/FOT-RodinWanpaku_Pro_B.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Humming";
+  src: url("fonts/nintendoP_Humming-E002pr.otf"),
+    url("fonts/nintendoP_Humming-E002pr.woff") format("woff"),
+    url("fonts/nintendoP_Humming-E002pr.woff2") format("woff2"),
+    url("fonts/nintendoP_Humming-E002pr.ttf") format("truetype");
+}
+
+html,
+body {
+  background-image: radial-gradient(#e5d8a9 20%, transparent 20%),
+    radial-gradient(#e5d8a9 20%, transparent 20%);
+  background-color: #fff;
+  background-position: 0 0, 50px 50px;
+  background-size: 20px 20px;
+  /* font-family: "Spectral", serif; */
+  font-family: "Rodin_Wanpaku";
+  font-family: "Humming";
+  user-select: none;
+  margin: 0;
+  color: #6e6756;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content {
+  padding-bottom: 3rem;
+}
