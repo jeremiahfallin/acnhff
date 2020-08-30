@@ -24,10 +24,11 @@ body {
   background-color: #fff;
   background-position: 0 0, 50px 50px;
   background-size: 20px 20px;
-  /* font-family: "Spectral", serif; */
-  /* font-family: "Rodin_Wanpaku";
-  font-family: "Humming"; */
-  font-family: "Seurat Pro B";
+  /* font-family: 'Spectral', serif; */
+  /* font-family: 'Rodin_Wanpaku';
+  font-family: 'Humming'; */
+  /* font-family: "Seurat Pro B"; */
+  font-family: "PT Sans", sans-serif;
   user-select: none;
   margin: 0;
   color: #6e6756;

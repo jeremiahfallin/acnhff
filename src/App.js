@@ -12,6 +12,11 @@ export default function App() {
         href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
         rel="stylesheet"
       /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+          rel="stylesheet"
+        />
+
         <Header />
         <PickerContainer />
       </div>
