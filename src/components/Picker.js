@@ -61,6 +61,9 @@ const IslandContainer = styled.div`
   margin-right: auto;
   justify-content: center;
   width: 60%;
+  @media (max-width: 900px) {
+    grid-template-rows: 3vh 20vh 40vh;
+  }
 `;
 
 const FavoritesContainer = styled.div`
