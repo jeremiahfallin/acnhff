@@ -28,8 +28,8 @@ const items = Object.keys(villagersData).map((key) => {
   return returnValue;
 });
 const PickerContainer = () => {
-  const { width } = useWindowDimensions();
-  const [batchSize, setBatchSize] = useState(width > 900 ? 5 : 3);
+  const { height, width } = useWindowDimensions();
+  const [batchSize, setBatchSize] = useState(0);
   const [state, dispatch] = useFavorites({
     storageKey: "favorites",
     items: items,
@@ -37,8 +37,10 @@ const PickerContainer = () => {
   });
 
   useEffect(() => {
-    setBatchSize(width > 900 ? 10 : 3);
-  }, [width]);
+    setBatchSize(
+      width > 900 && height > 800 ? 10 : width > 900 && height < 800 ? 5 : 3
+    );
+  }, [width, height]);
 
   useEffect(() => {
     dispatch({ type: "BATCH_SIZE", batchSize });
@@ -62,6 +64,9 @@ const IslandContainer = styled.div`
   justify-content: center;
   width: 60%;
   @media (max-width: 900px) {
+    grid-template-rows: 3vh 20vh 40vh;
+  }
+  @media (max-height: 800px) {
     grid-template-rows: 3vh 20vh 40vh;
   }
 `;
@@ -90,7 +95,6 @@ const VillagerList = styled.ul`
   /* display: flex;
   flex-wrap: wrap; */
   display: grid;
-  grid-auto-flow: column;
   grid-gap: 30px;
   text-align: center;
   margin: 0;
@@ -100,7 +104,11 @@ const VillagerList = styled.ul`
   @media (min-width: 900px) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
+    row-gap: 10px;
+  }
+  @media (max-height: 800px) {
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
   }
 `;
 

@@ -31,14 +31,18 @@ const FavoritesEsVeeGee = ({ favorites }) => {
       height="169"
       viewBox="0 -10 652 179"
       style={{
-        margin: "auto"
+        margin: "auto",
+        width: "100%",
+        height: "auto"
       }}
     >
       <defs></defs>
       <path
         id="Dialogue"
         style={cls1}
-        d="M281.406,17.427c309.056-50.949,396.418,20.89,363.625,74.918-10.148,16.719-36.337,36.8-95.853,49.816-66.462,14.539-161.993,19.055-267.772,25.1C-54.207,186.449-50.84-21.39,94.568,13.288,142.928,24.821,223.006,27.054,281.406,17.427Z"
+        d="M281,17
+        c309-50,396,20,363,74-10,16-36,36-95,49-66,14-161,19-267,25
+        C-54,186-50-21,94,13,142,24,223,27,281,17"
       />
       {favDimensions.map((d, i) => {
         return (
@@ -78,9 +82,9 @@ const FavoritesEsVeeGee = ({ favorites }) => {
           height="2.5em"
           stroke="#c2ab44"
           fill="#c2ab44"
-          stroke-width="5"
+          strokeWidth="5"
         />
-        <text x="5" y="130" font-size="2em" fill="#fff" fontWeight="bold">
+        <text x="5" y="130" fontSize="2em" fill="#fff" fontWeight="bold">
           Favorites
         </text>
       </g>
