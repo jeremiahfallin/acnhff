@@ -31,15 +31,13 @@ const Footer = () => {
   return (
     <StyledFooter>
       <StyledLinkContainer>
-        ©{" "}
         <StyledFooterLinks href="https://tacit.netlify.app">
-          Jeremiah Fallin
+          © Tacit Tech
         </StyledFooterLinks>
       </StyledLinkContainer>
       <StyledLinkContainer>
-        site design:{" "}
         <StyledFooterLinks href="https://kristiluu.com/Kristi-Luu-81f0bbfff7c6472086310860f1f1ff8f">
-          Kristi Luu
+          site design: Kristi Luu
         </StyledFooterLinks>
       </StyledLinkContainer>
     </StyledFooter>

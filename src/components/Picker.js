@@ -22,7 +22,8 @@ const items = Object.keys(villagersData).map((key) => {
     textColor: entry["text-color"],
     bubbleColor: entry["bubble-color"],
     icon: entry.icon_uri,
-    image: entry.image_uri
+    image: entry.image_uri,
+    favorite_image: entry.favorite_uri
   };
   return returnValue;
 });
@@ -36,7 +37,7 @@ const PickerContainer = () => {
   });
 
   useEffect(() => {
-    setBatchSize(width > 900 ? 5 : 3);
+    setBatchSize(width > 900 ? 10 : 3);
   }, [width]);
 
   useEffect(() => {
@@ -54,8 +55,8 @@ const PickerContainer = () => {
 
 const IslandContainer = styled.div`
   display: grid;
-  grid-template-rows: 10vh 20vh 40vh;
-  grid-gap: 50px;
+  grid-template-rows: 3vh 20vh 50vh;
+  grid-gap: 3rem;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -83,14 +84,21 @@ const FavoritesTitle = styled.div`
 `;
 
 const VillagerList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-auto-flow: column;
   grid-gap: 30px;
   text-align: center;
   margin: 0;
   padding: 0;
   justify-content: center;
   align-content: center;
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
 `;
 
 const VillagerListItem = styled.li`
@@ -121,7 +129,7 @@ const PickButton = styled.button`
   cursor: pointer;
   border: 0;
   border-radius: 30px;
-  padding: 0.3em 0.5em;
+  padding: 0.2em 0.5em;
   font-size: 1.5em;
   @media (min-width: 900px) {
     font-size: 2em;
@@ -141,18 +149,6 @@ const PickerButton = styled.button`
   padding: 0.3em 0.5em;
 `;
 
-const FoundOverlay = styled.div`
-  position: absolute;
-  background: #c2ab44;
-  border-radius: 20px;
-  color: #fff;
-  padding: 2px 10px;
-  font-size: 2em;
-  font-weight: bold;
-  left: 10px;
-  bottom: 1em;
-`;
-
 const PickerComponent = ({ evaluating, favorites, dispatch }) => {
   const [selected, setSelected] = useState([]);
 
@@ -168,7 +164,6 @@ const PickerComponent = ({ evaluating, favorites, dispatch }) => {
           }}
         >
           <FavoritesEsVeeGee style={{ zIndex: "-999" }} favorites={favorites} />
-          <FoundOverlay>Favorites</FoundOverlay>
         </div>
         <FavoritesContainer>
           <FavoritesTitle>

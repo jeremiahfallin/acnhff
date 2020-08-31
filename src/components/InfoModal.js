@@ -37,6 +37,7 @@ const StyledInfoButton = styled.button`
   width: 30px;
   font-size: larger;
   font-weight: bold;
+  margin-top: 5px;
 `;
 
 const customStyles = {

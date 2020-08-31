@@ -47,7 +47,7 @@ const FavoritesEsVeeGee = ({ favorites }) => {
               <circle r={imageSize / 2} cx={d.x} cy={d.y} />
             </clipPath>
             <image
-              href={favorites[i]["image"]}
+              href={favorites[i]["favorite_image"]}
               height={imageSize}
               width={imageSize}
               x={d.x - imageSize / 2}
@@ -68,6 +68,22 @@ const FavoritesEsVeeGee = ({ favorites }) => {
           />
         );
       })}
+      <g>
+        <rect
+          x="0"
+          y="100"
+          rx="20"
+          ry="20"
+          width="8.5em"
+          height="2.5em"
+          stroke="#c2ab44"
+          fill="#c2ab44"
+          stroke-width="5"
+        />
+        <text x="5" y="130" font-size="2em" fill="#fff" fontWeight="bold">
+          Favorites
+        </text>
+      </g>
     </svg>
   );
 };
