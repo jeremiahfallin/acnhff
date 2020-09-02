@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
+  position: absolute;
+  width: 100%;
   background: #88dbe7;
-  height: 75px;
+  height: 3rem;
+  top: 0;
 `;
 
 const Header = () => {

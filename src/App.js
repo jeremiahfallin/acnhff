@@ -1,26 +1,34 @@
 import React from "react";
+import styled from "styled-components";
 import "./styles.css";
 import Header from "./components/Header";
 import PickerContainer from "./components/Picker";
 import Footer from "./components/Footer";
 
+const PageLayout = styled.div`
+  position: relative;
+  min-height: 100vh;
+`;
+
+const Container = styled.div`
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+`;
+
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
-        {/* <link
-        href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
-        rel="stylesheet"
-      /> */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
-          rel="stylesheet"
-        />
-
+      <PageLayout>
         <Header />
-        <PickerContainer />
-      </div>
-      <Footer />
+        <Container>
+          <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+            rel="stylesheet"
+          />
+          <PickerContainer />
+        </Container>
+        <Footer />
+      </PageLayout>
     </div>
   );
 }

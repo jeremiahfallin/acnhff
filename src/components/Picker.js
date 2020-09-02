@@ -37,9 +37,8 @@ const PickerContainer = () => {
   });
 
   useEffect(() => {
-    setBatchSize(
-      width > 900 && height > 800 ? 10 : width > 900 && height < 800 ? 5 : 3
-    );
+    setBatchSize(width > 900 && height > 900 ? 10 : width > 900 ? 5 : 3);
+    console.log(height);
   }, [width, height]);
 
   useEffect(() => {
@@ -63,6 +62,7 @@ const IslandContainer = styled.div`
   margin-right: auto;
   justify-content: center;
   width: 60%;
+  height: 100%;
   @media (max-width: 900px) {
     grid-template-rows: 3vh 20vh 40vh;
   }
@@ -96,6 +96,7 @@ const VillagerList = styled.ul`
   flex-wrap: wrap; */
   display: grid;
   grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -106,8 +107,8 @@ const VillagerList = styled.ul`
     grid-template-rows: repeat(2, 1fr);
     row-gap: 10px;
   }
-  @media (max-height: 800px) {
-    grid-auto-flow: column;
+  @media (max-height: 900px) {
+    /* grid-auto-flow: column; */
     grid-template-rows: 1fr;
   }
 `;

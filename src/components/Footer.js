@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <StyledLinkContainer>
-        <StyledFooterLinks href="https://tacit.netlify.app">
+        <StyledFooterLinks href="https://github.com/jeremiahfallin">
           © Tacit Tech
         </StyledFooterLinks>
       </StyledLinkContainer>
