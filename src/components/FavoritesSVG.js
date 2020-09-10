@@ -27,10 +27,11 @@ const FavoritesEsVeeGee = ({ favorites }) => {
       id="Favorites_Dots"
       data-name="Favorites Dots"
       xmlns="http://www.w3.org/2000/svg"
-      width="652"
-      height="169"
+      width={favorites.length === 10 ? String(1.5 * 652) : `652`}
+      height={favorites.length === 10 ? String(1.5 * 169) : `169`}
       viewBox="0 -10 652 179"
       style={{
+        display: "inline-block",
         margin: "auto",
         width: "100%",
         height: "auto"
@@ -47,16 +48,12 @@ const FavoritesEsVeeGee = ({ favorites }) => {
       {favDimensions.map((d, i) => {
         return (
           <React.Fragment key={`${i}`}>
-            <clipPath id={`clipCircle${d.x}${d.y}`}>
-              <circle r={imageSize / 2} cx={d.x} cy={d.y} />
-            </clipPath>
             <image
               href={favorites[i]["favorite_image"]}
               height={imageSize}
               width={imageSize}
               x={d.x - imageSize / 2}
               y={d.y - imageSize / 2}
-              clipPath={`url(#clipCircle${d.x}${d.y})`}
             />
           </React.Fragment>
         );
@@ -78,14 +75,14 @@ const FavoritesEsVeeGee = ({ favorites }) => {
           y="100"
           rx="20"
           ry="20"
-          width="8.5em"
+          width="10em"
           height="2.5em"
           stroke="#c2ab44"
           fill="#c2ab44"
           strokeWidth="5"
         />
-        <text x="5" y="130" fontSize="2em" fill="#fff" fontWeight="bold">
-          Favorites
+        <text x="5" y="130" fontSize="1.8em" fill="#fff" fontWeight="bold">
+          Dream Town
         </text>
       </g>
     </svg>
