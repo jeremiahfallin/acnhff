@@ -10,7 +10,7 @@ const SpaceCarousels = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100% - 6rem);
+  height: 100%;
 `;
 
 const ResetButton = styled.button`

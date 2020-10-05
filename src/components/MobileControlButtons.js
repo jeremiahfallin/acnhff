@@ -7,6 +7,7 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   padding: 10px;
+  padding-top: 5px;
 `;
 
 const SmallButtonContainer = styled.div`
