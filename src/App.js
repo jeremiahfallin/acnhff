@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 
 const Container = styled.div`
   padding-top: 3rem;
-  height: calc(100vh - 6rem);
+  height: calc(100% - 6rem);
   width: 100%;
 `;
 
