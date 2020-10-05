@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import VillagerTile from "./MobileVillagerTile";
-import Dots from "./MobileDots";
 import MobileControlButtons from "./MobileControlButtons";
 import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
 // import "pure-react-carousel/dist/react-carousel.es.css";
@@ -73,7 +72,7 @@ const MobilePickerComponent = ({ evaluating, favorites, dispatch }) => {
               paddingTop: "10px"
             }}
           >
-            <Dots villagers={evaluating} selected={selected} />
+            <DotGroup disableActiveDots />
           </div>
         </CarouselProvider>
 
@@ -118,6 +117,7 @@ const MobilePickerComponent = ({ evaluating, favorites, dispatch }) => {
         {favorites.map((v, i) => {
           return (
             <img
+              key={i}
               src={favorites[i]["favorite_image"]}
               alt={favorites[i]}
               height={"80%"}

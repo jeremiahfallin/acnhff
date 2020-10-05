@@ -4,7 +4,6 @@ import "./styles.css";
 import Header from "./components/Header";
 import PickerContainer from "./components/Picker";
 import Footer from "./components/Footer";
-import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const PageLayout = styled.div`
   position: relative;
@@ -18,22 +17,17 @@ const Container = styled.div`
 `;
 
 export default function App() {
-  let { height: vh } = useWindowDimensions();
-  vh *= 0.01;
-
   return (
     <div className="App">
       <link
         href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
         rel="stylesheet"
       />
-      <PageLayout>
-        <Header />
-        <Container vh={vh}>
-          <PickerContainer />
-        </Container>
-        <Footer />
-      </PageLayout>
+      <Header />
+      <Container>
+        <PickerContainer />
+      </Container>
+      <Footer />
     </div>
   );
 }
