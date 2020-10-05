@@ -5,10 +5,10 @@ import Header from "./components/Header";
 import PickerContainer from "./components/Picker";
 import Footer from "./components/Footer";
 
-const PageLayout = styled.div`
-  position: relative;
-  min-height: 100vh;
-`;
+// const PageLayout = styled.div`
+//   position: relative;
+//   min-height: 100vh;
+// `;
 
 const Container = styled.div`
   padding-top: 3rem;
