@@ -9,6 +9,7 @@ body {
   user-select: none;
   margin: 0;
   color: #6e6756;
+  height: 100%;
 }
 
 .carousel__container {
