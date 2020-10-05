@@ -27,8 +27,8 @@ const FavoritesEsVeeGee = ({ favorites }) => {
       id="Favorites_Dots"
       data-name="Favorites Dots"
       xmlns="http://www.w3.org/2000/svg"
-      width={favorites.length === 10 ? String(1.5 * 652) : `652`}
-      height={favorites.length === 10 ? String(1.5 * 169) : `169`}
+      width={favorites.length === 10 ? `${1.5 * 652}` : `652`}
+      height={favorites.length === 10 ? `${1.5 * 169}` : `169`}
       viewBox="0 -10 652 179"
       style={{
         display: "inline-block",
