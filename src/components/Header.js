@@ -12,7 +12,7 @@ const StyledHeader = styled.div`
 const Header = () => {
   return (
     <StyledHeader>
-      <h1 style={{ textAlign: "center", margin: 0 }}>ACNH Dream Villagers</h1>
+      <h1 style={{ textAlign: "center", margin: 0 }}>ACNH Dreamies</h1>
     </StyledHeader>
   );
 };
