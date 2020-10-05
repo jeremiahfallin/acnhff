@@ -69,8 +69,7 @@ const MobilePickerComponent = ({ evaluating, favorites, dispatch }) => {
             style={{
               display: "flex",
               justifyContent: "center",
-              alignContent: "center",
-              paddingTop: "10px"
+              alignContent: "center"
             }}
           >
             <Dots villagers={evaluating} selected={selected} />
