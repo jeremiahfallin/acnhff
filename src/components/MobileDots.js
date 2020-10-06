@@ -8,8 +8,8 @@ const DotGroup = styled.div`
 `;
 
 const Dot = styled.button`
-  height: 25px;
-  width: 25px;
+  height: 1.5em;
+  width: 1.5em;
   background: ${(props) => (props.background ? `#88dbe7` : `#79e0b5`)};
   border: 0;
   border: ${(props) => props.border && `2px solid #2ea594`};
