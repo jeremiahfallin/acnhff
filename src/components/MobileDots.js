@@ -5,11 +5,12 @@ import { CarouselContext } from "pure-react-carousel";
 const DotGroup = styled.div`
   display: grid;
   grid-auto-flow: column;
+  padding-bottom: 5px;
 `;
 
 const Dot = styled.button`
-  height: 1.5em;
-  width: 1.5em;
+  height: 25px;
+  width: 25px;
   background: ${(props) => (props.background ? `#88dbe7` : `#79e0b5`)};
   border: 0;
   border: ${(props) => props.border && `2px solid #2ea594`};
