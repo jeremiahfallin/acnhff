@@ -16,8 +16,8 @@ const VillagerSpan = styled.span`
   text-align: left;
   margin-bottom: 10px;
   margin-top: 5px;
-  width: 20vh;
-  height: 20vh;
+  width: 18vh;
+  height: 18vh;
   padding: 3px;
   cursor: ${(props) => !props.favorite && "pointer"};
 `;
@@ -66,7 +66,7 @@ const VillagerTile = ({ villager, selected = [], setSelected, favorite }) => {
         <Image
           src={villager.image}
           alt={villager.name}
-          style={{ height: "20vh", width: "20vh" }}
+          style={{ height: "18vh", width: "18vh" }}
           className={
             selectedContainsVillager(villager) ? "slide--selected" : ""
           }
