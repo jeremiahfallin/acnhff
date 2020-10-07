@@ -7,7 +7,7 @@ const StyledHeader = styled.div`
   width: 100%;
   background: #88dbe7;
   background: ${(props) =>
-    `linear-gradient(to right, #88dbe7 ${props.completed}, #97A5C4 ${props.completed})`};
+    `linear-gradient(to right, #88dbe7 ${props.completed}, #BBA0B2 ${props.completed})`};
   height: 3rem;
   top: 0;
 `;
