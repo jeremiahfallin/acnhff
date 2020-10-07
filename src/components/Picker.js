@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import useFavorites from "../hooks/useFavorites";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import PickerComponent from "./PickerComponent";
 import MobilePickerComponent from "./MobilePickerComponent";
+import { CompleteContext } from "./CompleteContext";
 
 import villagersData from "./villagers.json";
 
@@ -26,6 +27,7 @@ const items = Object.keys(villagersData).map((key) => {
   return returnValue;
 });
 const PickerContainer = () => {
+  const { setCompleted } = useContext(CompleteContext);
   const { height, width } = useWindowDimensions();
   const [batchSize, setBatchSize] = useState(0);
   const [state, dispatch] = useFavorites({
@@ -34,7 +36,9 @@ const PickerContainer = () => {
     maxBatchSize: batchSize
   });
 
-  // console.log(`height: ${height} width: ${width}`);
+  useEffect(() => {
+    setCompleted(state.eliminated.length);
+  }, [setCompleted, state.eliminated]);
 
   useEffect(() => {
     setBatchSize(
