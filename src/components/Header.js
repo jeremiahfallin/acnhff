@@ -10,6 +10,9 @@ const StyledHeader = styled.div`
     `linear-gradient(to right, #88dbe7 ${props.completed}, #BBA0B2 ${props.completed})`};
   height: 3rem;
   top: 0;
+  * {
+    color: #1b1b1b;
+  }
 `;
 
 const Header = () => {
