@@ -1,0 +1,16 @@
+html,
+body {
+  background-image: radial-gradient(#e5d8a9 20%, transparent 20%),
+    radial-gradient(#e5d8a9 20%, transparent 20%);
+  background-color: #fff;
+  background-position: 0 0, 50px 50px;
+  background-size: 20px 20px;
+  font-family: "PT Sans", sans-serif;
+  user-select: none;
+  margin: 0;
+  color: #6e6756;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}

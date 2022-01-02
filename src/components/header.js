@@ -1,42 +1,30 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React, { useContext } from "react";
+import styled from "styled-components";
+import { CompleteContext } from "./CompleteContext";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const StyledHeader = styled.div`
+  position: absolute;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  background: #88dbe7;
+  background: ${props =>
+    `linear-gradient(to right, #88dbe7 ${props.completed}, #BBA0B2 ${props.completed})`};
+  height: 3rem;
+  top: 0;
+  * {
+    color: #1b1b1b;
+  }
+`;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Header = () => {
+  const { completed } = useContext(CompleteContext);
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+  return (
+    <StyledHeader completed={`${(100 * completed) / 391}`.split(".")[0] + "%"}>
+      <h1 style={{ textAlign: "center", margin: 0 }}>ACNH Villager Center</h1>
+    </StyledHeader>
+  );
+};
 
-export default Header
+export default Header;

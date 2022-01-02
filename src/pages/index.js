@@ -1,31 +1,87 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useState } from "react";
+import styled from "styled-components";
+import "./styles.css";
+import Header from "../components/Header";
+import Picker from "../components/Picker";
+import Footer from "../components/Footer";
+import { CompleteContext } from "../components/CompleteContext";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const Container = styled.div`
+  padding-top: 3rem;
+  height: calc(100% - 6rem);
+  width: 100%;
+`;
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  const [completed, setCompleted] = useState(0);
+  const villagers = data.allVillager.nodes;
+  return (
+    <main className="App">
+      <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+        rel="stylesheet"
+      />
+      <CompleteContext.Provider value={{ ...{ completed, setCompleted } }}>
+        <Layout>
+          <Header />
+          <Container>
+            <Picker villagers={villagers} />
+          </Container>
+          <Footer />
+        </Layout>
+      </CompleteContext.Provider>
+    </main>
+  );
+};
 
-export default IndexPage
+export const query = graphql`
+  query VillagerQuery {
+    allVillager {
+      nodes {
+        alt_name
+        appearances
+        birthday_month
+        birthday_day
+        debut
+        clothing
+        image_url
+        id
+        url
+        title_color
+        text_color
+        species
+        sign
+        quote
+        prev_phrases
+        phrase
+        personality
+        name
+        islander
+        gender
+        nh_details {
+          sub_personality
+          quote
+          photo_url
+          image_url
+          icon_url
+          house_wallpaper
+          house_music_note
+          house_music
+          house_interior_url
+          house_flooring
+          house_exterior_url
+          hobby
+          fav_styles
+          fav_colors
+          clothing_variation
+          clothing
+          catchphrase
+        }
+      }
+    }
+  }
+`;
+
+export default IndexPage;
