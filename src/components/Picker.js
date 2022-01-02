@@ -26,7 +26,6 @@ import { CompleteContext } from "./CompleteContext";
 // });
 
 const Picker = ({ villagers }) => {
-  console.log(villagers);
   const { setCompleted } = useContext(CompleteContext);
   const { height, width } = useWindowDimensions();
   const [batchSize, setBatchSize] = useState(0);

@@ -131,7 +131,6 @@ const PickerButton = styled.button`
 
 const PickerComponent = ({ evaluating, favorites, dispatch }) => {
   const [selected, setSelected] = useState([]);
-  console.log(evaluating);
 
   return (
     <>
