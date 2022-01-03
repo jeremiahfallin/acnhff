@@ -32,7 +32,6 @@ const FavoritesContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   justify-items: flex-end;
   align-items: center;
-  height: 100%;
 `;
 
 const VillagerImage = styled.img`
