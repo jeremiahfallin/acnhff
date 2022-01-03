@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 
 function getWindowDimensions() {
-  if (typeof window === undefined) {
+  const isBrowser = typeof window !== "undefined";
+  if (!isBrowser) {
     return { width: 0, height: 0 };
-  } else if (typeof window !== undefined) {
+  } else if (isBrowser) {
     const { innerWidth: width, innerHeight: height } = window;
     return {
       width,
