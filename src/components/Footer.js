@@ -25,14 +25,14 @@ const FooterLink = styled.a`
   }
   color: #000;
   text-decoration: none;
-  margin-right: 10px;
-  margin-bottom: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
 `;
 
 const ModalWrapper = styled.span`
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  padding-left: 10px;
 `;
 
 const Footer = () => {
